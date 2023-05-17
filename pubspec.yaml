@@ -1,6 +1,6 @@
 name: pulse
 description: Pulse mini state management
-version: 0.0.1
+version: 1.0.0
 homepage:
 
 environment:
