@@ -9,7 +9,7 @@ class PulseNavigator {
 
   static GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
-  Future<T?>? push<T extends Widget>(T route) {
+  Future<Object?>? push<T extends Widget>(T route) {
     BuildContext? context = navigatorKey.currentState?.context;
     assert(context != null, PulseErrors.contextNotFoundError());
 
@@ -20,7 +20,7 @@ class PulseNavigator {
     );
   }
 
-  Future<T?>? pushNamed<T>(String routeName, {PulseArguments<T>? arguments}) {
+  Future<Object?>? pushNamed<T>(String routeName, {PulseArguments<T>? arguments}) {
     BuildContext? context = navigatorKey.currentState?.context;
     assert(context != null, PulseErrors.contextNotFoundError());
 

@@ -13,7 +13,13 @@ class CounterView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Counter'),
+        title: const Text('Posts'),
+        leading: IconButton(
+          onPressed: (){
+            _navigator.pop<String>("Counter value is ${counterViewModel.value}");
+          },
+          icon: const Icon(Icons.arrow_back),
+        ),
       ),
       body: Center(
         child: PulseBuilder(

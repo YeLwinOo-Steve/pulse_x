@@ -3,6 +3,7 @@ import 'package:example/view_models/quotes_view_model.dart';
 import 'package:example/views/posts_view.dart';
 import 'package:example/views/timer_view.dart';
 import 'package:flutter/material.dart';
+import 'package:logger/logger.dart';
 import 'package:lottie/lottie.dart';
 import 'package:pulse/pulse.dart';
 import 'package:quoter/quoter.dart';
@@ -78,8 +79,11 @@ class _QuotesViewState extends State<QuotesView> {
         children: [
           FloatingActionButton(
             heroTag: 'counter',
-            onPressed: () {
-              _navigator.push(CounterView());
+            onPressed: () async {
+              final data = await _navigator.push(CounterView());
+              if(data != null){
+                _showSnackBar(data);
+              }
             },
             child: const Icon(
               Icons.calculate,
@@ -116,6 +120,34 @@ class _QuotesViewState extends State<QuotesView> {
             child: const Icon(Icons.add_comment_rounded),
           ),
         ],
+      ),
+    );
+  }
+  void _showSnackBar(dynamic data){
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Center(
+          child: Text(
+            '🧮 $data',
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+              color: indigo,
+            ),
+          ),
+        ),
+        backgroundColor: indigo100,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16.0),
+        ),
+        padding: const EdgeInsets.symmetric(
+          vertical: 14.0,
+          horizontal: 8.0,
+        ),
+        margin: const EdgeInsets.symmetric(
+          horizontal: 14.0,
+          vertical: 10.0,
+        ),
+        behavior: SnackBarBehavior.floating,
+        showCloseIcon: true,
       ),
     );
   }
