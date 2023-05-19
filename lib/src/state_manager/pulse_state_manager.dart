@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pulse/src/errors/pulse_errors.dart';
+import 'package:pulse/src/view_model/pulse_base_view_model.dart';
 
-import '../view_model/pulse_base_view_model.dart';
 
 class PulseStateManager<VM extends PulseBaseViewModel> extends InheritedWidget {
   const PulseStateManager({

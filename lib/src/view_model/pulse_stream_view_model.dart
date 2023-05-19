@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
-import 'package:logger/logger.dart';
 import 'package:pulse/pulse.dart';
 import 'package:pulse/src/errors/pulse_errors.dart';
 

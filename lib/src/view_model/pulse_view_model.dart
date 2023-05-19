@@ -1,7 +1,5 @@
 import 'pulse_base_view_model.dart';
 
-
-
 abstract class PulseViewModel<V> extends PulseBaseViewModel<V> {
   PulseViewModel(V val) : super(val);
 }

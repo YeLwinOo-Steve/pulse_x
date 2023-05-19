@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pulse/pulse.dart';
-import 'package:pulse/src/errors/pulse_errors.dart';
 import 'package:pulse/src/view_model/pulse_base_view_model.dart';
 
 typedef PulseVMBuilder<VM> = Widget Function(
@@ -33,14 +32,14 @@ class _PulseBuilderState<V, VM extends PulseBaseViewModel<V>>
   void initState() {
     super.initState();
     vm = widget.viewModel;
-    widget.viewModel.onInit();
+    vm.onInit();
     vm.addListener(_handleChange);
   }
 
   @override
   void didUpdateWidget(covariant PulseBuilder<V, VM> oldWidget) {
     super.didUpdateWidget(oldWidget);
-    if (oldWidget.viewModel != vm) {
+    if (oldWidget.viewModel.value != vm.value) {
       oldWidget.viewModel.removeListener(_handleChange);
       vm.addListener(_handleChange);
     }
@@ -59,7 +58,7 @@ class _PulseBuilderState<V, VM extends PulseBaseViewModel<V>>
 
   @override
   Widget build(BuildContext context) {
-    return PulseSStateManager<VM>(
+    return PulseStateManager<VM>(
       viewModel: vm,
       child: widget.builder(
         context,
@@ -69,26 +68,3 @@ class _PulseBuilderState<V, VM extends PulseBaseViewModel<V>>
     );
   }
 }
-
-class PulseSStateManager<VM extends PulseBaseViewModel> extends InheritedWidget {
-  const PulseSStateManager({
-    super.key,
-    required super.child,
-    required this.viewModel,
-  });
-  final VM viewModel;
-
-  static VM? of<VM extends PulseBaseViewModel>(BuildContext context) {
-    final provider =
-    context.dependOnInheritedWidgetOfExactType<PulseSStateManager<VM>>();
-    if (provider == null) {
-      PulseErrors.managerNotFoundError(VM);
-    }
-    return provider?.viewModel;
-  }
-
-  @override
-  bool updateShouldNotify(covariant InheritedWidget oldWidget) =>
-      oldWidget.child != child;
-}
-

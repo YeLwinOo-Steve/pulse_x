@@ -35,8 +35,8 @@ class _QuotesViewState extends State<QuotesView> {
       body: PulseBuilder(
         viewModel: viewModel,
         builder: (context, model, child) {
-          List<Quote> quoteModel = model.value;
-          return quoteModel.isEmpty
+          List<Quote> quoteList = model.value;
+          return quoteList.isEmpty
               ? const EmptyQuoteView()
               : GridView.builder(
                   padding: const EdgeInsets.only(bottom: 80),
@@ -45,9 +45,9 @@ class _QuotesViewState extends State<QuotesView> {
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                   ),
-                  itemCount: quoteModel.length,
+                  itemCount: quoteList.length,
                   itemBuilder: (context, index) {
-                    Quote quote = quoteModel.elementAt(index);
+                    Quote quote = quoteList.elementAt(index);
                     return Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(16.0),

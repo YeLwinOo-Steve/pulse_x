@@ -1,3 +1,9 @@
-## 0.0.1
+## 1.0.0
 
-* TODO: Describe initial release.
+# Features
+
+- Simple data management
+- Stream data management
+- Future data management
+- Service locator
+- Navigator

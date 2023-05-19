@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:pulse/pulse.dart';
 import 'package:pulse/src/view_model/pulse_base_view_model.dart';
 
