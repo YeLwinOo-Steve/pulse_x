@@ -18,3 +18,5 @@ export 'src/state_manager/pulse_stream_state_manager.dart'
     show PulseStreamStateManager;
 export 'src/builder/pulse_reaction.dart' show PulseReaction;
 export 'src/injection/pulse_injector.dart' show PulseInjector;
+export 'src/router/pulse_route.dart' show PulseArguments;
+export 'src/router/pulse_router.dart' show PulseNavigator;

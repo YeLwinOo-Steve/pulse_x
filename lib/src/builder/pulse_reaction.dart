@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:pulse/pulse.dart';
 
 typedef ReactionDisposer = void Function();
-typedef Validator<V extends PulseState> = void Function(V, ReactionDisposer);
+typedef Validator<V> = void Function(V, ReactionDisposer);
 
 class PulseReaction<V extends PulseState> extends ValueNotifier<V> {
   final PulseFutureViewModel model;

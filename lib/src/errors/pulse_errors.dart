@@ -44,4 +44,15 @@ class PulseErrors {
       ],
     );
   }
+
+  static void contextNotFoundError() {
+    throw FlutterError.fromParts(
+      [
+        ErrorSummary('Context not found error!'),
+        ErrorDescription(
+          'Make sure you have properly set the global navigator key.',
+        ),
+      ],
+    );
+  }
 }

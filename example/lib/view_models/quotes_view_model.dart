@@ -11,7 +11,6 @@ class QuotesViewModel extends PulseListViewModel<Quote> {
   void addQuote() {
     Quote quote = generateRandomQuote();
     addValue(quote);
-    // value = quotes;
   }
 
   Quote generateRandomQuote() {
