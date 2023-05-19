@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d8b1f754e94decdb",
+        "id": "d1500a7176a8a1b7",
         "type": "tabs",
         "children": [
           {
-            "id": "1a522e5cd8ac4784",
+            "id": "e88f3c61e54ac7dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -146,9 +146,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1a522e5cd8ac4784",
+  "active": "e88f3c61e54ac7dc",
   "lastOpenFiles": [
     "assets/pulse_example.mp4",
+    "assets/pulse_example.gif",
+    "README.md",
     "example/assets/empty_quote.json",
     "example/assets",
     "example/build/501c6907",
@@ -158,8 +160,6 @@
     "example/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream.len",
     "example/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream",
     "example/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at",
-    "example/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i",
-    "assets/logo.png",
-    "README.md"
+    "assets/logo.png"
   ]
 }

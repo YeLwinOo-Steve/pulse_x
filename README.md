@@ -44,7 +44,7 @@
 
 > Source code of this example project can be found in `example` folder. More and more examples are coming....
 
-![Pulse Example](assets/pulse_example.mp4)
+![Pulse Example](assets/pulse_example.gif)
 
 # Installing Pulse
 
