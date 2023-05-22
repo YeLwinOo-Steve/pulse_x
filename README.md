@@ -73,16 +73,16 @@ dependencies:
 ### 1. Simple data management
 
 ##### 🎢 Iteratable data management
-		📃 Documentation → https://ye-lwin-oo-1.gitbook.io/pulse-state-management/state-management/collection-data
-		👾 Example → https://github.com/YeLwinOo-Steve/rand_user.git
+- 📃 Documentation → https://ye-lwin-oo-1.gitbook.io/pulse-state-management/state-management/collection-data
+- 👾 Example → https://github.com/YeLwinOo-Steve/rand_user
 
 ##### 🌊 Stream data management
-		📃 Documentation → https://ye-lwin-oo-1.gitbook.io/pulse-state-management/state-management/stream-data
-		👾 Example → https://github.com/YeLwinOo-Steve/stream_time.git
+- 📃 Documentation → https://ye-lwin-oo-1.gitbook.io/pulse-state-management/state-management/stream-data
+- 👾 Example → https://github.com/YeLwinOo-Steve/stream_time
 
 ##### 🔮 Future data management
-		📃 Documentation → https://ye-lwin-oo-1.gitbook.io/pulse-state-management/state-management/future-data
-		👾 Example → https://github.com/YeLwinOo-Steve/posts
+- 📃 Documentation → https://ye-lwin-oo-1.gitbook.io/pulse-state-management/state-management/future-data
+- 👾 Example → https://github.com/YeLwinOo-Steve/posts
 
 
 ### 🚧 This documentation is under construction!! More are coming...
