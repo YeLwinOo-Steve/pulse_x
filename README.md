@@ -17,9 +17,7 @@
 
 #### **🏹 Pulse's 3 Main Targets**
 
-- ### 🚀   PRODUCTIVITY
-- ### ⚖️   SCALABILITY
-- ### 🧩   MODULARITY
+### 🚀   PRODUCTIVITY       |       ⚖️   SCALABILITY       |       🧩   MODULARITY
 
 
 > **🎯** **PRODUCTIVITY**
@@ -62,14 +60,29 @@ dependencies:
 
 # Features
 
-#### __Pulse__ has __5__ features for state management.
+#### __Pulse__ is mainly composed of ( 5 ) features.
 
-1. Simple Data Management
-2. Stream Management
-3. Future data Management
-4. Dependency Injection (DI)
-5. Navigator
+1. 💡 Simple Data Management
+2. 🌊 Stream Management
+3. 🔮 Future data Management
+4. 💉 Dependency Injection (DI)
+5. 🧭 Navigator
 
 ## Usage
 
-### 🚧 This documentation is under construction!!
+### 1. Simple data management
+
+##### 🎢 Iteratable data management
+		📃 Documentation → https://ye-lwin-oo-1.gitbook.io/pulse-state-management/state-management/collection-data
+		👾 Example → https://github.com/YeLwinOo-Steve/rand_user.git
+
+##### 🌊 Stream data management
+		📃 Documentation → https://ye-lwin-oo-1.gitbook.io/pulse-state-management/state-management/stream-data
+		👾 Example → https://github.com/YeLwinOo-Steve/stream_time.git
+
+##### 🔮 Future data management
+		📃 Documentation → https://ye-lwin-oo-1.gitbook.io/pulse-state-management/state-management/future-data
+		👾 Example → https://github.com/YeLwinOo-Steve/posts
+
+
+### 🚧 This documentation is under construction!! More are coming...
