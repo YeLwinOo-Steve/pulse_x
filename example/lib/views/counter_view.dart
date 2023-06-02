@@ -1,13 +1,13 @@
 import 'package:example/dependency_injection.dart';
 import 'package:example/view_models/counter_view_model.dart';
 import 'package:flutter/material.dart';
-import 'package:pulse/pulse.dart';
+import 'package:pulse_x/pulse_x.dart';
 
 final amber500 = Colors.amber.shade500;
 
 class CounterView extends StatelessWidget {
   CounterView({Key? key}) : super(key: key);
-  final _navigator = injector.find<PulseNavigator>();
+  final _navigator = injector.find<PulseXNavigator>();
   final counterViewModel = injector.find<CounterViewModel>();
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class CounterView extends StatelessWidget {
         ),
       ),
       body: Center(
-        child: PulseBuilder(
+        child: PulseXBuilder(
           viewModel: counterViewModel,
           builder: (_, model, __) {
             return Text(

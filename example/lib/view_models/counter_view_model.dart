@@ -1,11 +1,11 @@
 import 'dart:math';
 
 import 'package:logger/logger.dart';
-import 'package:pulse/pulse.dart';
+import 'package:pulse_x/pulse_x.dart';
 
 final _logger = Logger();
 
-class CounterViewModel extends PulseViewModel<int> {
+class CounterViewModel extends PulseXViewModel<int> {
   CounterViewModel() : super(0);
 
   void increment() {

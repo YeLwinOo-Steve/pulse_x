@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class PulseArguments<T> {
+class PulseXArguments<T> {
   final T data;
-  PulseArguments(this.data);
+  PulseXArguments(this.data);
 }
 
-class PulseRoute<T> extends MaterialPageRoute<T> {
-  final PulseArguments<T>? arguments;
-  PulseRoute({
+class PulseXRoute<T> extends MaterialPageRoute<T> {
+  final PulseXArguments<T>? arguments;
+  PulseXRoute({
     required WidgetBuilder builder,
     RouteSettings? settings,
     this.arguments,

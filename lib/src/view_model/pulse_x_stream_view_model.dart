@@ -1,13 +1,17 @@
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
-import 'package:pulse/pulse.dart';
-import 'package:pulse/src/errors/pulse_errors.dart';
+import 'package:pulse_x/pulse_x.dart';
+import 'package:pulse_x/src/errors/pulse_x_errors.dart';
 
-
-
-abstract class PulseStreamViewModel<V> extends ChangeNotifier {
-  PulseStatus status = PulseStatus.initial;
+/// An abstract [PulseXStreamViewModel] that holds generic type [V].
+/// [PulseXStreamViewModel] extends [ChangeNotifier]
+/// You don't need to care about [StreamController] and [Stream], PulseX will automatically handle them
+/// If you wanna add data to [Stream] via sink, use [addValue] method
+/// You can pause, resume or update stream by calling method [pause] & [resume] & [update]
+/// NOTE: be sure to call [dispose] method to avoid memory leak
+abstract class PulseXStreamViewModel<V> extends ChangeNotifier {
+  PulseXStatus status = PulseXStatus.initial;
 
   final StreamController<V> _controller = StreamController<V>.broadcast();
   Stream<V> get stream => _controller.stream;
@@ -34,18 +38,19 @@ abstract class PulseStreamViewModel<V> extends ChangeNotifier {
       _controller.sink.add(data);
     }
   }
+
   void pause() {
     assert(
-    _streamSubscription != null,
-    PulseErrors.streamInitError(V),
+      _streamSubscription != null,
+      PulseXErrors.streamInitError(V),
     );
     _streamSubscription?.pause();
   }
 
   void resume() {
     assert(
-    _streamSubscription != null,
-    PulseErrors.streamInitError(V),
+      _streamSubscription != null,
+      PulseXErrors.streamInitError(V),
     );
     _streamSubscription?.resume();
   }

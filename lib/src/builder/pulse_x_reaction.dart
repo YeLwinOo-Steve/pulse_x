@@ -1,15 +1,15 @@
 import 'package:flutter/cupertino.dart';
-import 'package:pulse/pulse.dart';
+import 'package:pulse_x/pulse_x.dart';
 
 typedef ReactionDisposer = void Function();
 typedef Validator<V> = void Function(V, ReactionDisposer);
 
-class PulseReaction<V extends PulseState> extends ValueNotifier<V> {
-  final PulseFutureViewModel model;
+class PulseXReaction<V extends PulseXState> extends ValueNotifier<V> {
+  final PulseXFutureViewModel model;
   late void Function() _listener;
   final Validator validator;
   bool _isDisposed = false;
-  PulseReaction(this.model, this.validator) : super(PulseState.initial() as V) {
+  PulseXReaction(this.model, this.validator) : super(PulseXState.initial() as V) {
     _onInit();
   }
 
@@ -33,6 +33,6 @@ class PulseReaction<V extends PulseState> extends ValueNotifier<V> {
   bool get isDisposed => _isDisposed;
 }
 
-ReactionDisposer reactionDisposer<V>(PulseReaction reaction) {
+ReactionDisposer reactionDisposer<V>(PulseXReaction reaction) {
   return reaction.dispose;
 }

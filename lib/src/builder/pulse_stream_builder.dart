@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:pulse/pulse.dart';
+import 'package:pulse_x/pulse_x.dart';
 
-typedef PulseStreamVMBuilder<V, A extends PulseStreamViewModel> = Widget
+typedef PulseStreamVMBuilder<V, A extends PulseXStreamViewModel> = Widget
     Function(
   BuildContext context,
   A viewModel,
   AsyncSnapshot<V> snapshot,
 );
 
-class PulseStreamBuilder<V, VM extends PulseStreamViewModel<V>>
+class PulseStreamBuilder<V, VM extends PulseXStreamViewModel<V>>
     extends StatefulWidget {
   const PulseStreamBuilder({
     Key? key,
@@ -21,9 +21,9 @@ class PulseStreamBuilder<V, VM extends PulseStreamViewModel<V>>
   final Widget? child;
   final PulseStreamVMBuilder<V, VM> builder;
 
-  static VM? watch<VM extends PulseStreamViewModel>(BuildContext context) {
+  static VM? watch<VM extends PulseXStreamViewModel>(BuildContext context) {
     return context
-        .dependOnInheritedWidgetOfExactType<PulseStreamStateManager<VM>>()
+        .dependOnInheritedWidgetOfExactType<PulseXStreamStateManager<VM>>()
         ?.viewModel;
   }
 
@@ -31,7 +31,7 @@ class PulseStreamBuilder<V, VM extends PulseStreamViewModel<V>>
   State<PulseStreamBuilder> createState() => _PulseStreamBuilderState<V, VM>();
 }
 
-class _PulseStreamBuilderState<V, VM extends PulseStreamViewModel<V>>
+class _PulseStreamBuilderState<V, VM extends PulseXStreamViewModel<V>>
     extends State<PulseStreamBuilder<V, VM>> {
   late VM vm;
   @override
@@ -55,7 +55,7 @@ class _PulseStreamBuilderState<V, VM extends PulseStreamViewModel<V>>
 
   @override
   Widget build(BuildContext context) {
-    return PulseStreamStateManager<VM>(
+    return PulseXStreamStateManager<VM>(
       viewModel: vm,
       child: StreamBuilder<V>(
         stream: vm.stream,

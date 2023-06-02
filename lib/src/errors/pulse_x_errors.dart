@@ -1,12 +1,23 @@
 import 'package:flutter/foundation.dart';
 
-class PulseErrors {
+class PulseXErrors {
   static void streamInitError(v) {
     throw FlutterError.fromParts(
       [
         ErrorSummary('StreamSubscription<$v> is null!'),
         ErrorDescription(
           'An error occurred while processing a stream subscription: The stream subscription of type $v has not been initialized. Please initialize the subscription before using it.',
+        ),
+      ],
+    );
+  }
+
+  static void keyNotFoundError(v) {
+    throw FlutterError.fromParts(
+      [
+        ErrorSummary('Key not found error!'),
+        ErrorDescription(
+          'The provided key $v is not found in the Map. Be sure to add the key & value first!',
         ),
       ],
     );

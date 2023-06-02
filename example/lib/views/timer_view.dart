@@ -2,7 +2,7 @@ import 'package:example/dependency_injection.dart';
 import 'package:example/view_models/timer_view_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pulse/pulse.dart';
+import 'package:pulse_x/pulse_x.dart';
 
 final amber500 = Colors.amber.shade500;
 

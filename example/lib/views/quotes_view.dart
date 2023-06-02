@@ -5,7 +5,7 @@ import 'package:example/views/timer_view.dart';
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
 import 'package:lottie/lottie.dart';
-import 'package:pulse/pulse.dart';
+import 'package:pulse_x/pulse_x.dart';
 import 'package:quoter/quoter.dart';
 
 import 'counter_view.dart';
@@ -22,7 +22,7 @@ class QuotesView extends StatefulWidget {
 
 class _QuotesViewState extends State<QuotesView> {
   final viewModel = injector.find<QuotesViewModel>();
-  final _navigator = injector.find<PulseNavigator>();
+  final _navigator = injector.find<PulseXNavigator>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +32,7 @@ class _QuotesViewState extends State<QuotesView> {
           QuoteCount(),
         ],
       ),
-      body: PulseBuilder(
+      body: PulseXBuilder(
         viewModel: viewModel,
         builder: (context, model, child) {
           List<Quote> quoteList = model.value;
@@ -158,7 +158,7 @@ class QuoteCount extends StatelessWidget {
   final viewModel = injector.find<QuotesViewModel>();
   @override
   Widget build(BuildContext context) {
-    return PulseBuilder(
+    return PulseXBuilder(
       viewModel: viewModel,
       builder: (_, model, __) {
         return Container(

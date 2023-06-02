@@ -3,13 +3,13 @@ import 'package:example/view_models/counter_view_model.dart';
 import 'package:example/view_models/posts_view_model.dart';
 import 'package:example/view_models/quotes_view_model.dart';
 import 'package:example/view_models/timer_view_model.dart';
-import 'package:pulse/pulse.dart';
+import 'package:pulse_x/pulse_x.dart';
 
-PulseInjector injector = PulseInjector.instance;
+PulseXInjector injector = PulseXInjector.instance;
 
 class DI {
   static void setUp() {
-    injector.registerLazySingleton(() => PulseNavigator());
+    injector.registerLazySingleton(() => PulseXNavigator());
     injector.registerLazySingleton(
       () => PostService(),
     );

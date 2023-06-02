@@ -1,6 +1,6 @@
 import 'package:example/views/quotes_view.dart';
 import 'package:flutter/material.dart';
-import 'package:pulse/pulse.dart';
+import 'package:pulse_x/pulse_x.dart';
 
 import 'dependency_injection.dart';
 
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Pulse State Management Demo',
       /// register global navigator key here
-      navigatorKey: PulseNavigator.navigatorKey,
+      navigatorKey: PulseXNavigator.navigatorKey,
       theme: ThemeData(
         primarySwatch: Colors.amber,
         scaffoldBackgroundColor: Colors.amber.shade50,

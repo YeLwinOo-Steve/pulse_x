@@ -3,7 +3,7 @@ import 'package:example/models/post.dart';
 import 'package:example/view_models/posts_view_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pulse/pulse.dart';
+import 'package:pulse_x/pulse_x.dart';
 
 final red500 = Colors.red.shade500;
 const amber = Colors.amber;
@@ -20,12 +20,12 @@ class PostsView extends StatefulWidget {
 
 class _PostsViewState extends State<PostsView> {
   final postViewModel = injector.find<PostsViewModel>();
-  late PulseReaction reaction;
+  late PulseXReaction reaction;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    reaction = PulseReaction(postViewModel, (value, dispose) {
-      if (value.status == PulseStatus.loaded) {
+    reaction = PulseXReaction(postViewModel, (value, dispose) {
+      if (value.status == PulseXStatus.loaded) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Center(
@@ -68,12 +68,12 @@ class _PostsViewState extends State<PostsView> {
       appBar: AppBar(
         title: const Text('Posts'),
       ),
-      body: PulseFutureBuilder(
+      body: PulseXFutureBuilder(
         viewModel: postViewModel,
-        builder: (_, PulseState<dynamic> state, __) {
-          if (state.status == PulseStatus.error) {
+        builder: (_, PulseXState<dynamic> state, __) {
+          if (state.status == PulseXStatus.error) {
             return ErrorMessage(message: '${state.message}');
-          } else if (state.status == PulseStatus.loaded) {
+          } else if (state.status == PulseXStatus.loaded) {
             return const PostList();
           }
           return const Center(
@@ -93,8 +93,8 @@ class PostList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final viewModel = PulseStateManager.of<PostsViewModel>(context);
-    PulseState? state = viewModel?.value;
+    final viewModel = PulseXStateManager.of<PostsViewModel>(context);
+    PulseXState? state = viewModel?.value;
     List<Post> posts = state?.value as List<Post>;
     return ListView.builder(
       itemCount: posts.length,

@@ -1,9 +1,9 @@
-name: pulse
-description: Pulse mini state management
-version: 1.0.0
-repository: https://github.com/YeLwinOo-Steve/pulse
-issue_tracker: https://github.com/YeLwinOo-Steve/pulse/issues
-homepage: https://github.com/YeLwinOo-Steve/pulse
+name: pulse_x
+description: Pulse X is the mini state management for all of your needs. It has four features - state management, context-less routing, dependency injection & reaction (alternative name - side effects)
+version: 1.0.1
+repository: https://github.com/YeLwinOo-Steve/pulse_x
+issue_tracker: https://github.com/YeLwinOo-Steve/pulse_x/issues
+homepage: https://github.com/YeLwinOo-Steve/pulse_x
 documentation: https://ye-lwin-oo-1.gitbook.io/pulse-state-management
 
 environment:

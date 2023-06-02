@@ -1,9 +1,9 @@
 import 'dart:math';
 import 'package:example/models/post.dart';
 import 'package:example/service/api_service.dart';
-import 'package:pulse/pulse.dart';
+import 'package:pulse_x/pulse_x.dart';
 
-class PostsViewModel extends PulseFutureViewModel {
+class PostsViewModel extends PulseXFutureViewModel {
   final ApiService service;
   PostsViewModel({required this.service});
   @override
@@ -13,14 +13,14 @@ class PostsViewModel extends PulseFutureViewModel {
   }
 
   void _fetchPosts() async {
-    changeState(PulseState.loading());
+    changeState(PulseXState.loading());
     try {
       List<Post> posts = await service.getPosts();
-      changeState(PulseState.loaded(
+      changeState(PulseXState.loaded(
         posts,
       ));
     } catch (ex) {
-      changeState(PulseState.error(ex.toString()));
+      changeState(PulseXState.error(ex.toString()));
     }
   }
 }

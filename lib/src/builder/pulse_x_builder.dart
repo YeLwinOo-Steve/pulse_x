@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pulse/pulse.dart';
-import 'package:pulse/src/view_model/pulse_base_view_model.dart';
+import 'package:pulse_x/pulse_x.dart';
+import 'package:pulse_x/src/view_model/pulse_x_base_view_model.dart';
 
 typedef PulseVMBuilder<VM> = Widget Function(
   BuildContext context,
@@ -8,8 +8,8 @@ typedef PulseVMBuilder<VM> = Widget Function(
   Widget? child,
 );
 
-class PulseBuilder<V, VM extends PulseBaseViewModel<V>> extends StatefulWidget {
-  const PulseBuilder({
+class PulseXBuilder<V, VM extends PulseXBaseViewModel<V>> extends StatefulWidget {
+  const PulseXBuilder({
     Key? key,
     required this.viewModel,
     this.child,
@@ -22,11 +22,11 @@ class PulseBuilder<V, VM extends PulseBaseViewModel<V>> extends StatefulWidget {
   static Type typeOf<T>() => T;
 
   @override
-  State<PulseBuilder> createState() => _PulseBuilderState<V, VM>();
+  State<PulseXBuilder> createState() => _PulseXBuilderState<V, VM>();
 }
 
-class _PulseBuilderState<V, VM extends PulseBaseViewModel<V>>
-    extends State<PulseBuilder<V, VM>> {
+class _PulseXBuilderState<V, VM extends PulseXBaseViewModel<V>>
+    extends State<PulseXBuilder<V, VM>> {
   late VM vm;
   @override
   void initState() {
@@ -37,7 +37,7 @@ class _PulseBuilderState<V, VM extends PulseBaseViewModel<V>>
   }
 
   @override
-  void didUpdateWidget(covariant PulseBuilder<V, VM> oldWidget) {
+  void didUpdateWidget(covariant PulseXBuilder<V, VM> oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (oldWidget.viewModel.value != vm.value) {
       oldWidget.viewModel.removeListener(_handleChange);
@@ -58,7 +58,7 @@ class _PulseBuilderState<V, VM extends PulseBaseViewModel<V>>
 
   @override
   Widget build(BuildContext context) {
-    return PulseStateManager<VM>(
+    return PulseXStateManager<VM>(
       viewModel: vm,
       child: widget.builder(
         context,
