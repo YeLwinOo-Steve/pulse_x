@@ -1,6 +1,6 @@
 name: pulse_x
-description: Pulse X is the mini state management for all of your needs. It has four features - state management, context-less routing, dependency injection & reaction (alternative name - side effects)
-version: 1.0.1
+description: Pulse X is the mini state management. It has four features - state management, context-less routing, dependency injection & reaction (side effects)
+version: 1.0.2
 repository: https://github.com/YeLwinOo-Steve/pulse_x
 issue_tracker: https://github.com/YeLwinOo-Steve/pulse_x/issues
 homepage: https://github.com/YeLwinOo-Steve/pulse_x
