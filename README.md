@@ -1,7 +1,7 @@
 ### Pulse-X State Management
 ----
 
-![Pulse-X Logo](assets/Pulse_x_long.png)
+![Pulse-X Logo](assets/pulse_x_long.png)
 
 - [Why Pulse-X?](#why-Pulse-x?)
 - [Documentation](#documentation)
@@ -42,7 +42,7 @@
 
 > Source code of this example project can be found in `example` folder. More and more examples are coming....
 
-![Pulse-X Example](assets/Pulse_example.gif)
+![Pulse-X Example](assets/pulse_example.gif)
 
 # Installing Pulse-X
 
